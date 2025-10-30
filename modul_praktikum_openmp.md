@@ -33,7 +33,7 @@ Untuk mengompilasi program OpenMP di Linux:
 gcc -fopenmp nama_program.c -o nama_program
 ```
 
-Menjalankan dengan jumlah thread tertentu:
+Menjalankan dengan jumlah thread tertentu (Linux):
 ```bash
 export OMP_NUM_THREADS=8
 ./nama_program
