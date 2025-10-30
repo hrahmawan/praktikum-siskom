@@ -1,24 +1,24 @@
-# 🧮 Modul Praktikum: Pemrograman Multicore dengan OpenMP
+# Modul Praktikum: Pemrograman Multicore dengan OpenMP
 
-## 🕒 Durasi Praktikum
+## Durasi Praktikum
 2 jam
 
-## 🎯 Tujuan Pembelajaran
+## Tujuan Pembelajaran
 Mahasiswa memahami dasar-dasar pemrograman paralel menggunakan OpenMP serta mampu membandingkan performa antara program sekuensial dan paralel.
 
 ---
 
-## 🧩 1. Konsep Dasar OpenMP
+## 1. Konsep Dasar OpenMP
 
 OpenMP (**Open Multi-Processing**) adalah API (Application Programming Interface) yang mendukung pemrograman paralel pada sistem berbasis shared memory (memori bersama). OpenMP memungkinkan programmer menulis kode paralel dengan cara menambahkan **directive** khusus pada bahasa C, C++, atau Fortran.
 
-### 🔹 Fitur utama OpenMP
+### Fitur utama OpenMP
 - Model **fork-join parallelism**
 - **Shared memory architecture**
 - Penggunaan **pragma directives** seperti `#pragma omp parallel` dan `#pragma omp for`
 - Pengendalian jumlah thread dengan `OMP_NUM_THREADS`
 
-### 🔹 Arsitektur Dasar
+### Arsitektur Dasar
 Model eksekusi OpenMP menggunakan **fork-join**:
 1. Program dimulai dalam satu thread utama (master thread).
 2. Ketika mencapai *parallel region*, thread utama akan membuat beberapa *worker threads*.
@@ -26,7 +26,7 @@ Model eksekusi OpenMP menggunakan **fork-join**:
 
 ---
 
-## 🧩 2. Kompilasi dan Eksekusi Program OpenMP
+## 2. Kompilasi dan Eksekusi Program OpenMP
 
 Untuk mengompilasi program OpenMP di Linux:
 ```bash
@@ -41,9 +41,9 @@ export OMP_NUM_THREADS=8
 
 ---
 
-## 🧩 3. Contoh Program Dasar OpenMP
+## 3. Contoh Program Dasar OpenMP
 
-### 💻 Contoh 1 — Hello World Paralel
+### Contoh 1 — Hello World Paralel
 ```c
 #include <stdio.h>
 #include <omp.h>
@@ -58,7 +58,7 @@ int main() {
 }
 ```
 
-### 💻 Contoh 2 — Menjumlahkan Elemen Array (Paralel)
+### Contoh 2 — Menjumlahkan Elemen Array (Paralel)
 ```c
 #include <stdio.h>
 #include <omp.h>
@@ -83,7 +83,7 @@ int main() {
 
 ---
 
-## 🧩 4. Studi Kasus: Perkalian Matriks Besar
+## 4. Studi Kasus: Perkalian Matriks Besar
 
 ### 💻 Program Sekuensial
 ```c
@@ -114,7 +114,7 @@ int main() {
 }
 ```
 
-### 💻 Program Paralel (OpenMP)
+### Program Paralel (OpenMP)
 ```c
 #include <stdio.h>
 #include <stdlib.h>
@@ -144,7 +144,7 @@ int main() {
 }
 ```
 
-### ⚙️ Eksperimen dan Perbandingan
+### Eksperimen dan Perbandingan
 
 | Jumlah Thread | Waktu Sekuensial (s) | Waktu Paralel (s) | Speedup |
 |----------------|-----------------------|--------------------|----------|
@@ -157,7 +157,7 @@ int main() {
 
 ---
 
-## 🧩 5. Tugas Praktikum
+## 5. Tugas Praktikum
 
 1. Modifikasi program perkalian matriks untuk:
    - Mencetak jumlah thread yang digunakan.
@@ -173,8 +173,3 @@ int main() {
 - Chapman, Barbara et al., *Using OpenMP: Portable Shared Memory Parallel Programming*, MIT Press, 2007.
 - TutorialsPoint: [https://www.tutorialspoint.com/openmp/index.htm](https://www.tutorialspoint.com/openmp/index.htm)
 
----
-
-**Dibuat oleh:** Hendra Rahmawan  
-**Mata Kuliah:** Pemrograman Multicore dan Paralel  
-**Durasi:** 2 Jam Praktikum
